@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TicTacToe</title>
+	<meta name="description" content="Tic-Tac-Toe Game">	
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Ensures proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+
+	<!-- Custom CSS -->
+	<link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<!-- MODAL MARKUP START -->
+		<div class="modal fade" tabindex="-1" id="startModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">Let's play TicTacToe!</div>
+					<div class="modal-body">Please select a side.</div>
+					<div class="modal-footer">
+						<form>
+							<input type="checkbox" id="startModalFirst"> I would like to make the first move.</input>
+						</form>
+						<button id="sideX" type="button" class="btn btn-primary">X</button>
+						<button id="sideO" type="button" class="btn btn-primary">O</button>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end startModal -->
+		<div class="modal fade" tabindex="-1" id="userWinModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">You won!</div>
+					<div class="modal-body">Congratulations! You beat the computer! I'm not really sure this is even meant to be able to happen, to be honest...</div>
+					<div class="modal-footer">
+						<form>
+							<input type="checkbox" id="userWinFirst"> I would like to make the first move.</input>
+						</form>
+						<button type="button" class="btn btn-primary playAgain">Play again?</button>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end userWinModal -->
+		<div class="modal fade" tabindex="-1" id="computerWinModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">The computer won...</div>
+					<div class="modal-body">Too bad! The computer won this time.</div>
+					<div class="modal-footer">
+						<form>
+							<input type="checkbox" id="computerWinFirst"> I would like to make the first move.</input>
+						</form>
+						<button type="button" class="btn btn-primary playAgain">Play again?</button>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end computerWinModal -->
+		<div class="modal fade" tabindex="-1" id="tieModal" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">It's a draw!</div>
+					<div class="modal-body">
+						<p>Neither side won... but at least nobody lost. Right?</p>
+						<p class="tip">The computer can never lose, so this is the best-case scenario! Don't feel bad.</p>
+					</div>
+					<div class="modal-footer">
+						<form>
+							<input type="checkbox" id="tieFirst"> I would like to make the first move.</input>
+						</form>
+						<button type="button" class="btn btn-primary playAgain">Play again?</button>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end tieModal -->
+		<!-- MODAL MARKUP END -->
+		<!-- GRID MARKUP START  -->
+		<div class="row" id="rowOne">
+			<div class="col-xs-4 rightDivider" id="1"></div>
+			<div class="col-xs-4 rightDivider" id="2"></div>
+			<div class="col-xs-4" id="3"></div>
+		</div><!-- end first row -->
+		<div class="row" id="rowTwo">
+			<div class="col-xs-4 rightDivider" id="4"></div>
+			<div class="col-xs-4 rightDivider" id="5"></div>
+			<div class="col-xs-4" id="6"></div>
+		</div><!-- end second row -->
+		<div class="row" id="rowThree">
+			<div class="col-xs-4 rightDivider" id="7"></div>
+			<div class="col-xs-4 rightDivider" id="8"></div>
+			<div class="col-xs-4" id="9"></div>
+		</div><!-- end third row -->
+		<!-- GRID MARKUP END -->
+	</div>	<!-- end container -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap Javascript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="script.js"></script>
+</body>
+</html>
